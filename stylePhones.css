@@ -1,0 +1,44 @@
+@media screen and (min-width: 320px) {
+    .product {
+        width: 50%; 
+        max-width: 768px;
+        min-width: 320px; 
+        height: 500px;
+        background-color: rgba(143, 199, 229, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        flex:0 0 80%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        margin-bottom: 20px;
+        text-align: center;
+        position: relative;
+        margin:0 auto;
+      }
+      .contentBoxProducts {
+        width: 50%;
+        height: 200rem;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-x: auto;
+        gap: 20px;
+        overflow: hidden;
+        margin:0 auto;
+      }
+      .product-container {
+        width: 50%;
+        height: 200rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: auto;
+        gap: 20px;
+        overflow: hidden;
+        position: static;
+      }
+      
+}

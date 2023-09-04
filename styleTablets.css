@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 62.5%;
+    font-family: 'Jost', sans-serif;
+    text-decoration: none;
+  }
+  
+  /* Mobile Styles */
+  @media screen and (max-width: 768px) {
+    .contentBoxProducts,
+    .product-container {
+      height: auto; /* Remove fixed heights on containers */
+    }
+  
+    .product {
+      width: 100%; /* Full width for products on mobile */
+      max-width: none; /* Remove max-width for mobile */
+      min-width: 100%; /* Minimum width for mobile */
+      height: auto; /* Auto height for products on mobile */
+    }
+  
+    /* Additional mobile styles can be added here */
+  }
+  
+  /* Rest of your CSS for larger screens */
+  
+  /* ... */
+  

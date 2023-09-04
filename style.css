@@ -1,0 +1,254 @@
+*{
+  box-sizing: border-box;
+  margin: 0;  
+  padding:0;
+}
+html{
+  font-size: 62.5%;
+  font-family: 'Jost', sans-serif;
+  text-decoration:none;
+}
+/* -PRODUCTO------------------------------------------------------------------ */
+
+.first-colum {
+  width: 100%;
+  height: 650px;
+  display: flex;
+  margin:0 auto;
+  justify-content: center;
+  align-items: center;
+  background-color:transparent;
+}
+
+.image-first-colum {
+  width: 100%;
+  max-width: 100%;
+  height:493px;
+  display:flex;
+  margin:0 auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3); 
+ 
+
+}
+.vertical-text {
+  writing-mode: vertical-rl;
+  white-space: nowrap;  /* evita que se rompa en varias lineas*/
+  font-size: 210px;
+  text-transform: uppercase;
+  color:#fff;
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.vertical-text:hover {
+  color: #140603; /* Cambia el color al pasar el mouse */
+  transform: scale(1.1); /* Escala el texto para dar un efecto de crecimiento */
+}
+
+
+
+
+
+.product:hover {transform: translateY(-5px); /* Hacer que el producto se eleve ligeramente */
+opacity: 0.9; 
+}
+
+.contentBoxProducts {
+  width:100%;
+  height: 400rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  gap: 20px;
+  overflow: hidden;
+  margin:0 auto;
+  
+}
+.contentBoxProducts.hovered { /*CONTENEDOR DE TODOS LOS PRODUCTOS*/
+  animation: scroll 10s linear infinite;
+}
+.product-container {
+  width: 100%;
+  height: 400rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x: auto;
+  gap: 20px;
+  overflow: hidden;
+  position: static;
+}
+
+.product-container.hovered {
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+}
+
+.product {                        /*Cuadrado celeste*/
+  width: 100%; 
+  max-width: 290px;
+  min-width: 100px; 
+  height: 300px; 
+  background-color: rgba(143, 199, 229, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: none;
+  display: flex;
+  flex-direction: column;
+  flex:0 0 80%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  margin:0 auto;
+}
+.product img {
+  Width: 75%;
+  border-radius: none;
+  transition:transform 0.3s ease, z-index 0.1 ease;
+  position:relative;
+  z-index:1;   /* alto indice de apilamiento, asi se posicionaria de manera absoluta o relativa*/
+
+
+}
+.product img:hover {                        /* con esto agrando la imagen al pasar el mouse por encima, ojo con la superposicion*/
+transform:scale(2.2);
+z-index:2;                                   /* por encima de otros elementos*/
+}
+
+
+/* -HEADER------------------------------------------------------------------ */
+
+.header{
+  display: flex;
+  justify-content: flex-end; 
+  width: 100%;
+  align-items: center;
+  background-color: #333;
+  transition: 0.7s;
+  padding: 30px 20px;
+  text-decoration: none;
+  
+}
+header.abajo{
+background: #fff;
+padding: 15px 20px;
+
+}
+body {
+  background: #095FAF; 
+  font-family: 'Jost', sans-serif;
+  position:static;  
+}
+
+.main-nav {
+  background-color: #333;
+  color: #f1f1f1;
+  list-style:none ;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  text-decoration:none;
+  height: 60px;
+}
+.main-nav li {          /*textuli de los botones*/
+  display:flex;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  position: relative;
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  height: 50%;
+}
+
+.main-nav__item a{        /* BOTONES DEL HEADER */
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  padding: 5px;
+  border-radius: 1px;
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 15px;
+  color: #f1f1f1;
+  letter-spacing: 2px;
+  margin: 0 15px;
+  margin-top: 10px;
+  position: relative;
+  font-family: 'Jost', sans-serif;
+  transition: 0.9s;
+  width: 100%;
+  }
+
+.main-nav__item a:hover {
+  color:#fff;
+  
+}
+.main-nav__item a:active {
+  color: red;
+}
+.main-nav__item a::after {
+  margin-left: 10px ;
+}
+main {
+  padding: 20px;
+
+  
+}
+
+
+
+
+
+
+/* -DESCRIPCION DEL PRODUCTO Y COMPRA----------------------------------------------------------------- */ 
+
+.product-info {
+  margin-top: 25px;
+  text-align: left;
+  padding-top: 50px;
+  color: #fff;
+  
+}
+
+.product-info h2 {     /* titulo*/
+  font-size: 30px; 
+  margin-bottom: 5px;
+}
+
+.product-info p {
+  font-size: 20px;
+  margin-bottom: 5px;
+
+}
+button{ font-size: 16px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
